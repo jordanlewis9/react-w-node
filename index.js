@@ -6,9 +6,8 @@ const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
 
-const dbString = keys.dbConnectionString.replace("<password>", keys.dbPassword);
 mongoose.connect(
-  dbString,
+  keys.dbConnectionString,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
